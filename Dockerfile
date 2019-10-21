@@ -4,4 +4,7 @@ MAINTAINER Marc 'risson' Schmitt <marc.schmitt@risson.space>
 COPY ./install_pikaur /usr/bin/install_pikaur
 RUN install_pikaur docker
 
+RUN pacman -S make gcc autoconf automake autoconf-archive bison clang cmake \
+        ctags flex gcc-libs gdb glibc llvm
+
 RUN su docker -c "pikaur --noconfirm --noprogressbar --needed -S criterion"
