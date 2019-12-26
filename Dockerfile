@@ -5,7 +5,7 @@ RUN pacman --noconfirm --noprogressbar -Syyu
 
 RUN pacman --noconfirm --noprogressbar --needed -S make gcc autoconf automake \
             autoconf-archive bison clang cmake ctags flex gcc-libs gdb glibc \
-            llvm valgrind python python-yaml python-termcolor
+            llvm valgrind python python-yaml python-termcolor doxygen
 
 COPY ./install_criterion.sh /usr/bin/install_criterion
 RUN install_criterion docker
