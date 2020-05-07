@@ -10,4 +10,6 @@ RUN pacman --noconfirm --noprogressbar --needed -S make gcc autoconf automake \
             gtest
 
 COPY ./install_criterion.sh /usr/bin/install_criterion
+COPY ./install_nlohmann_json.sh /usr/bin/install_nlohmann_json
 RUN install_criterion docker
+RUN install_nlohmann_json docker2
